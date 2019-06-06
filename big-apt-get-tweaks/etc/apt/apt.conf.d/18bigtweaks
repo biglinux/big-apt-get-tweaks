@@ -6,7 +6,9 @@
 
 Acquire::http::timeout "10";
 APT::Immediate-Configure "false";
+DPkg::Options {"--force-unsafe-io";};
 DPkg::StopOnError "false"; 
+#DPkg::force-unsafe-io "true"; 
 T::Cache-Limit 2200000000;
 APT { Get { Fix-Broken "true"; }; };
 
@@ -25,6 +27,7 @@ DPkg::Post-Invoke {"apt -f install 2> /dev/null | sed '1,7d'";};
 DPkg::Post-Invoke {"dpkg --abort-after=9999999 --configure -a "};
 DPkg::Post-Invoke {"mv -f /var/cache/apt/archives/lock-big /var/cache/apt/archives/lock";};
 
+
 # DPkg::Post-Invoke {"rm -f /var/cache/apt/archives/lock";};
 
 DPkg::Post-Invoke {"mv -f /var/cache/apt/archives/lock /var/cache/apt/archives/lock-big";};
@@ -35,8 +38,9 @@ DPkg::Post-Invoke {"mv -f /var/cache/apt/archives/lock-big /var/cache/apt/archiv
 
 #DPkg::Pre-Install-Pkgs {"dpkg-preconfigure --apt --priority=low";};
 
-Acquire::http { Pipeline-Depth "5"; }
+Acquire::http { Pipeline-Depth "20"; }
 
+Acquire::Check-Valid-Until "0";
 Acquire::Queue-Mode "host";
 APT::Acquire::Retries 3;
 

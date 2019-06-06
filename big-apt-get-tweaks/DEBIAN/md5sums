@@ -1,4 +1,5 @@
-3f3479ddbb6e680573588853210db48c  DEBIAN/control
 d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
+3fa3d556626c5cd6b5f38c41eb662b14  DEBIAN/control
+071d7ac7b6d752c12abe05bb771d6d35  etc/apt/apt.conf.d/18bigtweaks
+5021abe7a5d968d7a2e6fa4fa52d6b03  etc/dpkg/dpkg.cfg.d/02apt-speedup
 bc379b58e5504abfafbc6d776c3aab28  usr/bin/dpkg-clean-set
-b49ea78dc7a41da2bdafebe33e3c648c  etc/apt/apt.conf.d/18bigtweaks
