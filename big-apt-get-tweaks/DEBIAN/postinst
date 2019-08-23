@@ -4,6 +4,7 @@ set -e
 if [ ! -e  "/etc/apt-tweaked" ]
 then
     echo 'APT::Install-Recommends "true";' > /etc/apt/apt.conf.d/99synaptic
+    sed -i 's|Install-Recommends "0";|Install-Recommends "1";|g' /root/.synaptic/synaptic.conf
     > /etc/apt-tweaked
 fi
 
