@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+if [ ! -e  "/etc/apt-tweaked" ]
+then
+    echo 'APT::Install-Recommends "true";' > /etc/apt/apt.conf.d/99synaptic
+    > /etc/apt-tweaked
+fi
+
+exit 0
