@@ -1,5 +1,7 @@
 d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
-3fa3d556626c5cd6b5f38c41eb662b14  DEBIAN/control
+d1c679e10a1d41bd2691f77d9886866c  DEBIAN/postinst
+57f5fbd25049893922d9c26131b83196  DEBIAN/control
 071d7ac7b6d752c12abe05bb771d6d35  etc/apt/apt.conf.d/18bigtweaks
+66625f081fbc84f1e466592a2d39d26b  etc/apt/apt.conf.d/91disable-autoremove
 5021abe7a5d968d7a2e6fa4fa52d6b03  etc/dpkg/dpkg.cfg.d/02apt-speedup
 bc379b58e5504abfafbc6d776c3aab28  usr/bin/dpkg-clean-set
